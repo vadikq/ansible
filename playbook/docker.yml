@@ -1,0 +1,10 @@
+---
+- name: Setup docker
+  hosts:
+    - docker_host
+  become: true
+  gather_facts: true
+  roles:
+    - ansible-role-docker
+  vars:
+    docker_install_compose: true
